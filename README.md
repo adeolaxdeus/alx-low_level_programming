@@ -13,3 +13,5 @@
 *  0x05-pointers_arrays_strings - A repo that contains how to use pointers, arrays, and how to use them, the differences between the to. How to use strings and how to manipulate them.
 
 * 0x06-pointers_arrays_strings - Advanced continuation of 0x05-pointers_arrays_strings.
+
+* 0x07-pointers_arrays_strings - More in depth into pointers and array, implementation of multidimensional arrays
