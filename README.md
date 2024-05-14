@@ -14,4 +14,6 @@
 
 * 0x06-pointers_arrays_strings - Advanced continuation of 0x05-pointers_arrays_strings.
 
-* 0x07-pointers_arrays_strings - More in depth into pointers and array, implementation of multidimensional arrays
+* 0x07-pointers_arrays_strings - More in depth into pointers and array, implementation of multidimensional arrays.
+
+* 0x0A-argc_argv - What is and how to use argc & argvommand line arguments and arguments to main, how to compile with unused variable.
