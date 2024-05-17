@@ -17,3 +17,7 @@
 * 0x07-pointers_arrays_strings - More in depth into pointers and array, implementation of multidimensional arrays.
 
 * 0x0A-argc_argv - What is and how to use argc & argvommand line arguments and arguments to main, how to compile with unused variable.
+
+* 0x0B-malloc_free - Memory allocation, automatic and dynamic.Implementation and use of malloc and free.
+
+*
