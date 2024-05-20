@@ -20,4 +20,6 @@
 
 * 0x0B-malloc_free - Memory allocation, automatic and dynamic.Implementation and use of malloc and free.
 
+* 0x0C-more_malloc_free - Advance implementation of 0x0B-malloc_free
+
 *
