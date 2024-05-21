@@ -22,4 +22,6 @@
 
 * 0x0C-more_malloc_free - Advance implementation of 0x0B-malloc_free
 
+* 0x0E-structures_typedef - What are structures, when, why and how to use them. How to use typedef.
+
 *
