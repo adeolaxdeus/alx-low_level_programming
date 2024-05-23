@@ -24,9 +24,13 @@
 
 * 0x0E-structures_typedef - What are structures, when, why and how to use them. How to use typedef.
 
-* 0x0D-preprocessor -
-            * What are macros and how to use them
-            * What are the most common predefined macros
-            * How to include guard your header files
+* 0x0D-preprocessor
+    * What are macros and how to use them
+    * What are the most common predefined macros
+    * How to include guard your header files
+
+* 0x0E-structures_typedef -
+    * What are structures, when, why and how to use them
+    * How to use typedef
 
 *
