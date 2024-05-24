@@ -25,12 +25,17 @@
 * 0x0E-structures_typedef - What are structures, when, why and how to use them. How to use typedef.
 
 * 0x0D-preprocessor
-    * What are macros and how to use them
-    * What are the most common predefined macros
-    * How to include guard your header files
+    *   What are macros and how to use them
+    *   What are the most common predefined macros
+    *   How to include guard your header files
 
 * 0x0E-structures_typedef -
-    * What are structures, when, why and how to use them
-    * How to use typedef
+    *   What are structures, when, why and how to use them
+    *   How to use typedef
+
+* 0x0F-function_pointers -
+    *   What are function pointers and how to use them
+    *   What does a function pointer exactly hold
+    * Where does a function pointer point to in the virtual memory
 
 *
