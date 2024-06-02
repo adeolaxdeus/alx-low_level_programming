@@ -38,4 +38,8 @@
     *   What does a function pointer exactly hold
     * Where does a function pointer point to in the virtual memory
 
-*
+* 0x12-singly_linked_lists - 
+    * When and why using linked lists vs arrays
+    * How to build and use linked lists
+
+* 
