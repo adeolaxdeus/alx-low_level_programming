@@ -1,6 +1,9 @@
 # ALX-LOW_LEVEL_PROGRAMMING REPOSITORY
 ## Description
-	This is the root repository of alx low level programming and it  contains all folders of alx low level programs done by me
+This is the root repository of alx low level programming and it  contains all folders of alx low level programs done by me
+
+* 0x00-hello_world - A repo that contains bash script for C source file
+compilation and also some basic C programs for beginners
 
 * 0x01-variables_if_else_while - A repo that contains basic implementation of control statements, operators.
 
