@@ -1,0 +1,11 @@
+#                 0x00-hello_world
+## Description
+	This repository contains bash scripts that helps compile C programs
+	and also basic C program to help famillarize a newbie to C language
+
+	* 0-preprocessor - a script that runs a C file through the preprocessor and
+	save the result into another file.
+
+		** The C file name will be saved in the variable $CFILE
+		** The output will be saved in the file c
+
