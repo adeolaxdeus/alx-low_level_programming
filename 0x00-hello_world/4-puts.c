@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - Entry point
+ * main - Print a string to stdout using pust
  *
  * Return: Always 0 (success)
  */
