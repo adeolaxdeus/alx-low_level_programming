@@ -1,8 +1,8 @@
 # ALX-LOW_LEVEL_PROGRAMMING REPOSITORY
+## Descriptio
+		This is the root repository of alx low level programming and it  contains all folders of alx low level programs done by me
 
-## main repository of all alx low level  repo
-
-* 0x01-variables_if_else_while - A repo that contains basic implementation of control statements, operators.
+		* 0x01-variables_if_else_while - A repo that contains basic implementation of control statements, operators.
 
 * 0x02-functions_nested_loops - A repo that contains how to create, use functions and nested loops, header files and difference between a declaration and definition of a function.
 
@@ -38,8 +38,8 @@
     *   What does a function pointer exactly hold
     * Where does a function pointer point to in the virtual memory
 
-* 0x12-singly_linked_lists - 
+* 0x12-singly_linked_lists -
     * When and why using linked lists vs arrays
     * How to build and use linked lists
 
-* 
+*
