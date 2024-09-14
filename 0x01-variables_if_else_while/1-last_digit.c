@@ -1,30 +1,26 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <stdio.h>
-
 /**
- * main - Entry point
+ * main - Print the range of a random number on the number line
  *
- * Return: Always 0
+ * Return: 0 on success
  */
 int main(void)
 {
-	int n, lastDigit;
+	int n;
+	int last_digit;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	lastDigit = n % 10;
-	printf("Last digit of %d is %d ", n, lastDigit);
-	if (lastDigit > 5)
-	{
-		printf("and is greater than 5");
-	}
-	else if (lastDigit == 0)
-	{
-		printf("and is 0");
-	}
+	/* your code goes there */
+	last_digit = n % 10;
+	if (last_digit > 5)
+		printf("Last digit of %d is %d and is greater than 5\n", n, last_digit);
+	else if (last_digit == 0)
+		printf("Last digit of %d is %d and is 0\n", n, last_digit);
 	else
-		printf("and is less than 6 and not 0");
-	putchar('\n');
+		printf("Last digit of %d is %d and is less than 6 and not 0\n",
+				n, last_digit);
 	return (0);
 }
