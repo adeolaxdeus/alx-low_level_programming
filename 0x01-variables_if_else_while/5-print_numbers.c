@@ -1,15 +1,14 @@
 #include <stdio.h>
 /**
- * main - prints all single digit numbers of base 10 starting from 0,
- * followed by a new line.
+ * main - Print number [0-9] in decimal base.
  *
- * Return: Always 0
+ * Return: 0 on success.
  */
 int main(void)
 {
-	int num = 0;
+	char num = 0;
 
-	while (num <= 9)
+	while (num < 10)
 	{
 		printf("%d", num);
 		num++;
