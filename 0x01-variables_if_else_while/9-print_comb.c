@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
- * main - prints all possible combinations of single-digit numbers.
+ * main - Print all possible combination of a single digit number
  *
- * Return: Always 0
+ * Return: 0 on success
  */
 int main(void)
 {
@@ -10,8 +10,12 @@ int main(void)
 
 	while (num < 10)
 	{
-		putchar(num + '0'); /* convert to ascil */
-		if (num != 9)
+		putchar(num + '0');
+		if (num == 9)
+		{
+			break;
+		}
+		else
 		{
 			putchar(',');
 			putchar(' ');
