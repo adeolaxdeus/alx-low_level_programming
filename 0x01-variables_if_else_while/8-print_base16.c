@@ -1,24 +1,23 @@
 #include <stdio.h>
 /**
- * main - prints all the numbers of base 16 in lowercase,
- * followed by a new line.
+ * main - Print all numbers of hexadecimal.
  *
- * Return: Always 0
+ * Return: 0 on success.
  */
 int main(void)
 {
 	int num = 0;
-	char alphabet = 'a';
+	char alphaBet = 'a';
 
-	while (num < 10)
+	while (num <= 9)
 	{
 		putchar(num + '0');
 		num++;
 	}
-	while (alphabet < 'g')
+	while (alphaBet <= 'f')
 	{
-		putchar(alphabet);
-		alphabet++;
+		putchar(alphaBet);
+		alphaBet++;
 	}
 	putchar('\n');
 	return (0);
