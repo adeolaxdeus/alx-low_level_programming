@@ -2,7 +2,6 @@
 /**
  * print_alphabet - Print {a-z} in lowercase.
  *
- * Return: 0 on success.
  */
 void print_alphabet(void)
 {
