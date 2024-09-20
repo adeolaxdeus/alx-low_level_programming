@@ -1,32 +1,32 @@
 #include <stdio.h>
 /**
- * main - prints all possible different combinations of two digits.
+ * main - Prints all possible different combinations of two digits.
  *
- * Return: Always 0
+ * Return: 0 on success
  */
 int main(void)
 {
-	int firstDigit = 0;
-	int secondDigit;
+	int i = 0;
+	int j;
 
-	while (firstDigit < 9)
+	while (i < 10)
 	{
-		secondDigit = 1;
-		while (secondDigit < 10)
+		j = 0;
+		while (j < 10)
 		{
-			if (firstDigit < secondDigit)
+			if (i < j)
 			{
-				putchar(firstDigit + '0');
-				putchar(secondDigit + '0');
-				if (firstDigit != 8 || secondDigit != 9)
+				putchar(i + '0');
+				putchar(j + '0');
+				if (i != 8 || j != 9)
 				{
 					putchar(',');
 					putchar(' ');
 				}
 			}
-			secondDigit++;
+			j++;
 		}
-		firstDigit++;
+		i++;
 	}
 	putchar('\n');
 	return (0);
