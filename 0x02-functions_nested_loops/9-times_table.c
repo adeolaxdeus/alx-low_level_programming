@@ -4,7 +4,7 @@
  * @num: Required. A number with two digit
  *
  */
-void print(int num)
+void print(int num, int flag)
 {
 	if (num > 9)
 	{
@@ -13,7 +13,8 @@ void print(int num)
 	}
 	else
 	{
-		_putchar(' ');
+		if (flag != 0)
+			_putchar(' ');
 		_putchar(num + '0');
 	}
 }
@@ -26,13 +27,14 @@ void times_table(void)
 {
 	int col = 0;
 	int row;
+	int flag = 0; /* Determine to when to print a space */
 
 	while (col < 10)
 	{
 		row = 0;
 		while (row < 10)
 		{
-			print(col * row);
+			print(col * row, flag=row);
 			if (row != 9)
 			{
 				_putchar(',');
