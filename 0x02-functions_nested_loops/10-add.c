@@ -1,12 +1,12 @@
 #include "main.h"
 /**
- * add - adds two integers and returns the result.
- * @num1: first operand
- * @num2: second operand
+ * add - Sum two numbers
+ * @x: Required. First number
+ * @y: Required. Second number
  *
- * Return: the result of the two operand
+ * Return: Sum of two numbers.
  */
-int add(int num1, int num2)
+int add(int x, int y)
 {
-	return (num1 + num2);
+	return (x + y);
 }
