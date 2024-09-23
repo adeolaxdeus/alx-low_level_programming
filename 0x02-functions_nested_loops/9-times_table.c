@@ -1,40 +1,46 @@
 #include "main.h"
 /**
- * times_table - prints the 9 times table, starting with 0.
+ * print - Print a double digit f6gure.
+ * @num: Required. A number with two digit
+ *
+ */
+void print(int num)
+{
+	if (num > 9)
+	{
+		_putchar((num / 10) + '0');
+		_putchar((num % 10) + '0');
+	}
+	else
+	{
+		_putchar(' ');
+		_putchar(num + '0');
+	}
+}
+
+/**
+ * times_table - Prints the 9 times table.
  *
  */
 void times_table(void)
 {
-	int cols, result, rows = 0;
+	int col = 0;
+	int row;
 
-	while (rows < 10)
+	while (col < 10)
 	{
-		cols = 0;
-		while (cols < 10)
+		row = 0;
+		while (row < 10)
 		{
-			result = cols * rows;
-			if (result > 9)
-			{
-				_putchar((result / 10) + '0');
-				_putchar((result % 10) + '0');
-			}
-			else if (result < 10)
-			{
-				if (cols != 0)
-				{
-					_putchar(' ');
-				}
-				_putchar(result + '0');
-			}
-			if (cols < 9)
+			print(col * row);
+			if (row != 9)
 			{
 				_putchar(',');
 				_putchar(' ');
 			}
-			cols++;
+			row++;
 		}
 		_putchar('\n');
-		rows++;
+		col++;
 	}
-	_putchar('\n');
 }
