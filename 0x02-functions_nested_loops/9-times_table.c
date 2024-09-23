@@ -2,7 +2,7 @@
 /**
  * print - Print a double digit f6gure.
  * @num: Required. A number with two digit
- *
+ * @flag: Required. Help determine if to print whitespace.
  */
 void print(int num, int flag)
 {
@@ -34,7 +34,7 @@ void times_table(void)
 		row = 0;
 		while (row < 10)
 		{
-			print(col * row, flag=row);
+			print(col * row, flag = row);
 			if (row != 9)
 			{
 				_putchar(',');
