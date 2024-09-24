@@ -49,7 +49,7 @@ void print_times_table(int n)
 			{
 				flag = row;
 				print(col * row, flag);
-				if (row != 0 && row != n)
+				if (row == 0 || row != n)
 				{
 					_putchar(',');
 					_putchar(' ');
