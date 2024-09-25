@@ -1,24 +1,24 @@
 #include <stdio.h>
 /**
- * main -  finds and prints the first 98 Fibonacci numbers, starting
- * with 1 and 2, followed by a new line.
+ * main - Prints the first 98 Fibonacci numbers.
  *
- * Return: Always 0
+ * Return: 0 on success.
  */
 int main(void)
 {
-	unsigned int num1 = 1;
-	unsigned int num2 = 2;
-	unsigned int fibnum;
+	unsigned long first_num = 0;
+	unsigned long second_num = 1;
+	unsigned long temp;
 	int count = 0;
 
-	printf("%u, %u", num1, num2);
-	while (count < 97)
+	while (count < 98)
 	{
-		fibnum = num1 + num2;
-		printf(", %u", fibnum);
-		num1 = num2;
-		num2 = fibnum;
+		temp = first_num + second_num;
+		printf("%lu", temp);
+		if (count != 97)
+			printf(", ");
+		first_num = second_num;
+		second_num = temp;
 		count++;
 	}
 	putchar('\n');
