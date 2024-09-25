@@ -1,33 +1,24 @@
 #include <stdio.h>
 /**
- * main - By considering the terms in the Fibonacci sequence whose values do
- * not exceed 4,000,000, write a program that finds and prints the sum of the
- * even-valued terms.
+ * main - Sum the total of even fibonacci numbers not exceeding 4,000,000.
  *
- * Return: Always (0)
+ * Return: 0 on success
  */
 int main(void)
 {
-	unsigned long int sum;
-	unsigned long int num1 = 1, num2 = 1;
-	unsigned long int fibnum;
-	int count = 1;
+	unsigned int first_num = 0;
+	unsigned int second_num = 1;
+	unsigned int temp;
+	unsigned int total;
 
-	while (count)
+	while (temp < 4000000)
 	{
-		fibnum = num1 + num2;
-		if (fibnum <= 4000000)
-		{
-			if (fibnum % 2 == 0)
-			{
-				sum += fibnum;
-			}
-		}
-		else
-			break;
-		num1 = num2;
-		num2 = fibnum;
+		if (temp % 2 == 0)
+			total += temp;
+		temp = first_num + second_num;
+		first_num = second_num;
+		second_num = temp;
 	}
-	printf("%ld\n", sum);
+	printf("%u\n", total);
 	return (0);
 }
