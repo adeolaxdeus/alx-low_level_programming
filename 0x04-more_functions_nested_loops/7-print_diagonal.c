@@ -1,31 +1,30 @@
 #include "main.h"
 /**
- * print_diagonal - draws a diagonal line on the terminal.
- * @n: number of times to print \ on stdout
+ * print_diagonal - Print n number of times the charactwr '\'.
+ * @n: Required. An integer.
  *
  */
 void print_diagonal(int n)
 {
-	int count = 1;
-	int count2;
+	int tab;
+	int temp = 0;
 
-	if (n == 0 || n < 0)
+	if (n <= 0)
 	{
 		_putchar('\n');
+		return;
 	}
-	else
+	while (n > 0)
 	{
-		while (count <= n)
+		tab = temp; /* temp store and count number of tab to printed */
+		while (tab > 0)
 		{
-			count2 = 1;
-			while (count2 < count)
-			{
-				_putchar(' ');
-				count2++;
-			}
-			_putchar('\\');
-			_putchar('\n');
-			count++;
+			_putchar(' ');
+			tab--;
 		}
+		_putchar('\\');
+		_putchar('\n');
+		temp++;
+		n--;
 	}
 }
