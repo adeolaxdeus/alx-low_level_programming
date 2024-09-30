@@ -1,24 +1,33 @@
 #include "main.h"
 /**
- * more_numbers - prints 10 times the numbers, from 0 to 14, followed
- * by a new line.
+ * print - Print numbers in tens or unit.
+ * @num: Required. An integer
+ *
+ */
+void print(int num)
+{
+	if (num > 9)
+		_putchar((num / 10) + '0');
+	_putchar((num % 10) + '0');
+}
+/**
+ * more_numbers - Print 0-14 ten times.
  *
  */
 void more_numbers(void)
 {
-	int count = 0;
-	int	num;
+	char i = 0;
+	int x;
 
-	while (count < 10)
+	while (i < 10)
 	{
-		num = 0;
-		while (num < 15)
+		x = 0;
+		while (x < 15)
 		{
-			_putchar(num + 0x30);
-			num++;
+			print(x);
+			x++;
 		}
 		_putchar('\n');
-		count++;
+		i++;
 	}
-	_putchar('\n');
 }
