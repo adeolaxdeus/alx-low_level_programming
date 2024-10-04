@@ -14,7 +14,10 @@ void puts_half(char *str)
 		x++;
 		ptr++;
 	}
-	x /= 2; /* get half of string */
+	if (x % 2 == 0)
+		x /= 2;
+	else
+		x = (x - 1) / 2;
 	while (str[x] != 0)
 	{
 		_putchar(str[x]);
