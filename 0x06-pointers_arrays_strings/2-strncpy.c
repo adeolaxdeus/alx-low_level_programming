@@ -19,6 +19,15 @@ char *_strncpy(char *dest, char *src, int n)
 		ptr[i] = src[i];
 		i++;
 	}
+	if (i < n && src[i] == '\0')
+	{
+		while (i < n)
+		{
+			ptr[i] = '\0';
+			i++;
+		}
+		ptr[i] = '\0';
+	}
 	if (src[i] == '\0')
 		ptr[i] = '\0';
 	return (ptr);
