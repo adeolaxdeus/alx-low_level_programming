@@ -26,7 +26,6 @@ char *_strncpy(char *dest, char *src, int n)
 			ptr[i] = '\0';
 			i++;
 		}
-		ptr[i] = '\0';
 	}
 	if (src[i] == '\0')
 		ptr[i] = '\0';
