@@ -1,26 +1,41 @@
 /**
- * cap_string - capitalizes all words of a string.
- * @str: pointer to a string
+ * is_sep - Check if a character is a word separator.
+ * @c: Pointer to a character.
  *
- * Return: pointer to str
+ * Return: 1 if true otherwise 0.
+ */
+int is_sep(char *c)
+{
+	char separator[] = {' ', '\n', '\t', ',', '"', '.', ';',
+		'!', '?', '{', '}', '(', ')'};
+	char *sep_ptr = separator;
+
+	while (*sep_ptr)
+	{
+		if (*c == *sep_ptr)
+			return (1);
+		sep_ptr++;
+	}
+	return (0);
+}
+/**
+ * cap_string - Capitalizes a string.
+ * @str: Pointer to a string.
+ *
+ * Return: Pointer to str.
  */
 char *cap_string(char *str)
 {
-	char *c = str;
+	char *ptr = str;
 
-	while (*c)
+	while (*ptr)
 	{
-		if (*c == ',' || *c == ';' || *c == '.' || *c == '!'
-			|| *c == '?' || *c == '(' || *c == ')' || *c ==
-			'{' || *c == '}' || *c == '"' || *c == ' ' || *c
-			== '\t' || *c == '\n')
+		if (is_sep(ptr) && (*(ptr + 1) >= 'a' && *(ptr + 1) <= 'z'))
 		{
-			if (*(c + 1) >= 'a' && *(c + 1) <= 'z')
-			{
-				*(c + 1) = ((*(c + 1) - 'a') + 'A');
-			}
+			ptr++;
+			*ptr -= 32;
 		}
-		c++;
+		ptr++;
 	}
 	return (str);
 }
