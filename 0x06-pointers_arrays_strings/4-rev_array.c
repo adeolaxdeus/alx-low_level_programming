@@ -1,19 +1,21 @@
 /**
- * reverse_array - reverses the content of an array of integers.
- * @a: pointer to an array
- * @n: number of elements
+ * reverse_array - Reverse an array of integers.
+ * @a: Pointer to array of integers.
+ * @n: Pointer to number of elements of the array.
  *
  */
 void reverse_array(int *a, int n)
 {
-	int temp, end = n - 1, index = 0;
+	int i = 0;
+	int temp;
 
-	while (index < end)
+	n -= 1;
+	while (i < n)
 	{
-		temp = a[index];
-		a[index] = a[end];
-		a[end] = temp;
-		index++;
-		end--;
+		temp = a[i];
+		a[i] = a[n];
+		a[n] = temp;
+		n--;
+		i++;
 	}
 }
