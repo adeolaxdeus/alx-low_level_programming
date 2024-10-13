@@ -1,29 +1,26 @@
 /**
- * leet -  encodes a string into 1337.
- * @str: string to be encode
+ * leet - Encodes a string into 1337.
+ * @str: Pointer to string to be encode
  *
- * Return: pointer to a string
+ * Return: Pointer to str.
  */
 char *leet(char *str)
 {
-	char text[] = "aeotlAEOTL";
-	char code[] = "4307143071";
-	char *temp = str;
-	int index;
+	char decode_str[] = "aeotlAEOTL";
+	char encode_str[] = "4307143071";
+	char *ptr = str;
+	int i;
 
-	while (*temp)
+	while (*ptr)
 	{
-		index = 0;
-		while (text[index] != '\0')
+		i = 0;
+		while (decode_str[i] != '\0')
 		{
-			if (*temp == text[index])
-			{
-				*temp = code[index];
-				break;
-			}
-			index++;
+			if (*ptr == decode_str[i])
+				*ptr = encode_str[i];
+			i++;
 		}
-		temp++;
+		ptr++;
 	}
 	return (str);
 }
