@@ -7,8 +7,8 @@
  */
 char *rot13(char *str)
 {
-	char decode_str[] = "abcdefghijklmnopqrstuvwxyz";
-	char encode_str[] = "nopqrstuvwxyzabcdefghijklm";
+	char decode_str[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char encode_str[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 	char *ptr = str;
 	int i;
 
