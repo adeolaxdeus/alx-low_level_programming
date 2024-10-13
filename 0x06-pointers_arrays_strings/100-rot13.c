@@ -1,30 +1,30 @@
 /**
- * rot13 - encodes a string using rot13.
- * @str: string to be encode
+ * rot13 - Encodes a string using rot13.
+ * @str: Pointer to string to be encode
  *
- * Return: encoded string
+ * Return: Pointer to str.
+ *
  */
 char *rot13(char *str)
 {
+	char decode_str[] = "abcdefghijklmnopqrstuvwxyz";
+	char encode_str[] = "nopqrstuvwxyzabcdefghijklm";
+	char *ptr = str;
 	int i;
-	char *temp = str;
-	char alpha[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	char inverse[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
-	while (*temp)
+	while (*str)
 	{
 		i = 0;
-		while (alpha[i] != '\0')
+		while (decode_str[i] != '\0')
 		{
-			if (*temp == alpha[i])
+			if (*str == decode_str[i])
 			{
-				*temp = inverse[i];
+				*str = encode_str[i];
 				break;
 			}
 			i++;
 		}
-		temp++;
+		str++;
 	}
-	*temp = '\0';
-	return (str);
+	return (ptr);
 }
