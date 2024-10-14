@@ -11,8 +11,8 @@
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int num1 = atoi(n1);
-	int num2 = atoi(n2);
+	unsigned int num1 = atoi(n1);
+	unsigned int num2 = atoi(n2);
 	int x;
 
 	x = sprintf(r, "%d", (num1 + num2));
