@@ -1,20 +1,22 @@
 /**
- * _memcpy - copies memory area.
- * @dest: pointer to buffer
- * @src: pointer to memory area to be copied
- * @n: number of bytes to fill memory
+ * _memcpy - Copies memory area.
+ * @dest: Pointer to buffer to copy n byte(s) to.
+ * @src: Pointer to buffer to copy n byte(s) from.
+ * @n: Number of byte(s) to copy
  *
- * Return: pointer to dest
+ * Return: Pointer to dest.
  */
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	unsigned int index = 0;
+	char *ptr = dest;
+	unsigned int i = 0;
 
-	while (index < n)
+	while (i < n && src[i] != '\0')
 	{
-		dest[index] = src[index];
-		index++;
+		ptr[i] = src[i];
+		i++;
 	}
-	dest[index] = '\0';
-	return (dest);
+	if (!ptr[i]) /* Check whether to null terminate ptr or not */
+		ptr[i] = '\0';
+	return (ptr);
 }
