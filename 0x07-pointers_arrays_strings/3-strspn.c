@@ -1,28 +1,40 @@
 /**
- * _strspn - gets the length of a prefix substring.
- * @s: string to be scanned
- * @accept: string containing characters to be matched
+ * _match - Find a character match in a string.
+ * @c: Character to look for.
+ * @str: String to be scan.
  *
- * Return: the number of bytes in the initial segment of s which,
- * consist only of bytes from accept.
+ * Return: 1 if c is found otherwise 0
+ */
+int _match(char c, char *str)
+{
+	while (*str)
+	{
+		if (c == *str)
+			return (1);
+		str++;
+	}
+	return (0);
+}
+/**
+ * _strspn - Get the length of a prefix substring
+ * @s: Pointer to string to be scan
+ * @accept: Pointer to string to be searched for in s
+ *
+ * Return: Number of bytes in accept found in s
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	int count = 0, index;
+	unsigned int i = 0;
+	char *ptr;
 
-	while (*s && *s != ' ')
+	while (*s)
 	{
-		index = 0;
-		while (accept[index] != '\0')
-		{
-			if (accept[index] == *s)
-			{
-				count++;
-				break;
-			}
-			index++;
-		}
+		ptr = accept;
+		if (_match(*s, ptr))
+			i++;
+		else
+			break;
 		s++;
 	}
-	return (count);
+	return (i);
 }
