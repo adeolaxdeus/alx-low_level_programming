@@ -8,6 +8,8 @@
 int _match(char *word, char *str)
 {
 	char *ptr = word;
+	char *s = str;
+	char *temp = word;
 	int i = 0, x = 0;
 
 	while (*ptr) /* get length of word */
@@ -15,12 +17,12 @@ int _match(char *word, char *str)
 		i++;
 		ptr++;
 	}
-	while (*word && *str)
+	while (*temp && *s)
 	{
-		if (*word == *str)
+		if (*temp == *s)
 			x++;
-		word++;
-		str++;
+		temp++;
+		s++;
 	}
 	if (x == i)
 		return (1);
@@ -37,6 +39,9 @@ int _match(char *word, char *str)
 char *_strstr(char *haystack, char *needle)
 {
 	char *ptr;
+
+	if (*needle == '\0')
+		return (haystack);
 
 	while (*needle)
 	{
