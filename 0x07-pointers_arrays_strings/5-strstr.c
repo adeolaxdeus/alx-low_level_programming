@@ -1,15 +1,13 @@
 /**
  * _match - Find a word match in a string
- * word: Word to be searched for in string
- * str: String to be scan.
+ * @word: Word to be searched for in string
+ * @str: String to be scan.
  *
  * Return: 1 if word match is found otherwise 0
  */
 int _match(char *word, char *str)
 {
 	char *ptr = word;
-	char *s = str;
-	char *temp = word;
 	int i = 0, x = 0;
 
 	while (*ptr) /* get length of word */
@@ -17,12 +15,14 @@ int _match(char *word, char *str)
 		i++;
 		ptr++;
 	}
-	while (*temp && *s)
+	while (*word && *str)
 	{
-		if (*temp == *s)
+		if (*word == *str)
 			x++;
-		temp++;
-		s++;
+		else
+			break;
+		word++;
+		str++;
 	}
 	if (x == i)
 		return (1);
@@ -38,24 +38,17 @@ int _match(char *word, char *str)
  */
 char *_strstr(char *haystack, char *needle)
 {
-	char *ptr;
-
 	if (*needle == '\0')
 		return (haystack);
 
-	while (*needle)
+	while (*haystack)
 	{
-		ptr = haystack;
-		while (*ptr)
+		if (*haystack == *needle)
 		{
-			if (*ptr == *needle)
-			{
-				if (_match(needle, ptr))
-					return (ptr);
-			}
-			ptr++;
+			if (_match(needle, haystack))
+				return (haystack);
 		}
-		needle++;
+		haystack++;
 	}
 	return ('\0');
 }
