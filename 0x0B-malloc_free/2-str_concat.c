@@ -1,51 +1,26 @@
-#include <stddef.h>
+#include <string.h>
 #include <stdlib.h>
 /**
- * checker - check if str1 and str2 are not null
- * @str1: first string
- * @str2: second string
+ * str_concat - Concatenates two string
+ * @s1: Pointer to a string
+ * @s2: Pointer to string to be concatenate to s1
  *
- */
-void checker(char *str1, char *str2)
-{
-	if (str1 == NULL)
-	{
-		*str1 = ' ';
-	}
-	if (str2 == NULL)
-		*str2 = ' ';
-}
-/**
- * str_concat - concatenates two string
- * @s1: first string to be concatenate
- * @s2: second string to e concatenate
- *
- * Return: pointer to a newly allocated memory which contains both s1 and s2,
- * or NULL on failure.
+ * Return: Pointer to a newly allocated memory that contains the concatenated
+ * string(s1, s2) on success otherwise NULL.
  */
 char *str_concat(char *s1, char *s2)
 {
-	int len = 0;
-	char *temp1;
-	char *temp2, *ptr, *tempPtr;
+	char *ptr, *temp;
+	unsigned int size;
 
-	checker(s1, s2);
-	temp1 = s1;
-	temp2 = s2;
-	while (*temp1)
-	{
-		len++;
-		temp1++;
-	}
-	while (*temp2)
-	{
-		len++;
-		temp2++;
-	}
-	ptr = malloc((len + 1) * sizeof(char));
+	if (s1 == NULL || s2 == NULL)
+		return (NULL);
+	size = strlen(s1);
+	size += strlen(s2);
+	ptr = malloc(sizeof(char) * (size + 1));
 	if (ptr == NULL)
 		return (NULL);
-	tempPtr = ptr;
+	temp = ptr;
 	while (*s1)
 	{
 		*ptr = *s1;
@@ -59,5 +34,5 @@ char *str_concat(char *s1, char *s2)
 		s2++;
 	}
 	*ptr = '\0';
-	return (tempPtr);
+	return (temp);
 }
