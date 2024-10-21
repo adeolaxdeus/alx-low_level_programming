@@ -34,10 +34,10 @@ int **alloc_grid(int width, int height)
 		row++;
 	}
 	row = 0;
-	while (row < width)
+	while (row < height)
 	{
 		col = 0;
-		while (col < height)
+		while (col < width)
 		{
 			array[row][col] = 0;
 			col++;
