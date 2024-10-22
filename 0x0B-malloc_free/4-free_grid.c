@@ -1,20 +1,20 @@
-#include <stddef.h>
 #include <stdlib.h>
 /**
- * free_grid - frees a 2 dimensional grid previously created by your,
- * alloc_grid function.
- * @grid: pointer to a dynamically allocated memory
- * @height: size of memory allocated
+ * free_grid - Frees a 2d array created previously by alloc_grid function
+ * @grid: Pointer to 2d array
+ * @height: Number of rows in the 2d array
  *
  */
 void free_grid(int **grid, int height)
 {
-	int i = 0;
+	int row = 0;
 
-	while (i < height)
+	while (row < height)
 	{
-		free(grid[i]);
-		i++;
+		free(grid[row]);
+		grid[row] = NULL;
+		row++;
 	}
 	free(grid);
+	grid = NULL;
 }
