@@ -11,12 +11,12 @@
 int _strlen(char **ptr_ptr, int n)
 {
 	unsigned int len = 0;
-	int i = 1; /* Skips program name */
+	int i = 0;
 
 	while (i < n)
 	{
 		len += strlen(ptr_ptr[i]);
-		len += 1; /* Add newline character count for each index(string) */
+		len += 1; /* Add newline character count for each argument  */
 		i++;
 	}
 	return (len);
