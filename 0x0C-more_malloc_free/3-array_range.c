@@ -1,31 +1,31 @@
-#include <stddef.h>
 #include <stdlib.h>
 /**
- * array_range - creates an array of integers.
- * @min: smallest digit of the array
- * @max: maximum digit of the array
+ * array_range - Creates an array of integer of a particular range.
+ * @min: A number, minimum starting range of array
+ * @max: A number, maximum ending range of array
  *
- * Return: pointer to the newly created array
+ * Return: Pointer to newly created memory on success otherwise NULL
  */
 int *array_range(int min, int max)
 {
-	int *ptr, *tempPtr, size, index = 0;
+	int i = 0, temp;
+	int *ptr;
 
 	if (min > max)
-	{
 		return (NULL);
+	while (min <= max)
+	{
+		i++;
+		min++;
 	}
-	size = (max - min) + 1;
-	ptr = malloc(size * sizeof(int));
+	ptr = malloc(sizeof(int) * i);
 	if (ptr == NULL)
-	{
 		return (NULL);
-	}
-	tempPtr = ptr;
-	while (index < size)
+	temp = 0;
+	while (temp < i)
 	{
-		ptr[index] = min + index;
-		index++;
+		ptr[temp] = temp;
+		temp++;
 	}
-	return (tempPtr);
+	return (ptr);
 }
