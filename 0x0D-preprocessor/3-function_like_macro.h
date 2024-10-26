@@ -1,6 +1,6 @@
 #ifndef _FILENAME_H
-#define _FILENME_H
+#define _FILENAME_H
 
-#define ABS(x) ((x) < (0) ? (x * -1) : (x))
+#define ABS(x) ((x) < (0) ? ((x) * -1) : (x))
 
 #endif
