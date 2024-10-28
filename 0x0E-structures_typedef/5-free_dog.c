@@ -1,17 +1,24 @@
-#include "dog.h"
-#include <stddef.h>
 #include <stdlib.h>
+#include "dog.h"
 /**
- * free_dog - frees dogs.
- * @d: pointer to dog element
+ * free_dog - Free a previously allocated memory of dog_t type
+ * @d: Pointer to a dog_t structure
  *
  */
 void free_dog(dog_t *d)
 {
-	if (d != NULL)
+	if (d == NULL)
+		return (NULL);
+	if (d->name != NULL)
 	{
 		free(d->name);
-		free(d->owner);
-		free(d);
+		d->name = NULL;
 	}
+	if (d->owner != NULL)
+	{
+		free(d->owner);
+		d->owner = NULL;
+	}
+	free(d);
+	d = NULL;
 }
