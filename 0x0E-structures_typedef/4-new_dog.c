@@ -1,80 +1,29 @@
 #include "dog.h"
-#include <stddef.h>
+#include <string.h>
 #include <stdlib.h>
 /**
- * getLen - get length of string
- * @s: string to be count.
+ * new_dog - Creates a new dog
+ * @name: Dog's name
+ * @age: Dog's age
+ * @owner: Dog's owner name
  *
- * Return: length of string
- */
-int getLen(char *s)
-{
-	char *ptr = s;
-	int len = 0;
-
-	while (*ptr)
-	{
-		len++;
-		ptr++;
-	}
-	return (len);
-}
-/**
- * copy - copy string
- * @str: string to be copy.
- *
- * Return: pointer to duplicated string.
- *
- */
-char *copy(char *str)
-{
-	char *ptr, *start;
-
-	ptr = malloc((getLen(str) + 1) * sizeof(char));
-	if (ptr == NULL)
-	{
-		return (NULL);
-	}
-	start = ptr;
-	while (*str)
-	{
-		*ptr = *str;
-		ptr++;
-		str++;
-	}
-	*ptr = '\0';
-	return (start);
-}
-/**
- * new_dog - creates a new dog
- * @name: name of dog
- * @age: age of dog
- * @owner: owner of dog
- *
- * Return: pointer to new_dog elements or NULL if the fnction fails.
+ * Return: Pointer to a newly allocated memory of type dog_t on success or NULL
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *doggy;
+	dog_t *dog_ptr;
 
-	doggy = malloc(sizeof(dog_t));
-	if (doggy == NULL)
-	{
+	dog_ptr = malloc(sizeof(dog_t));
+	if (dog_ptr == NULL)
 		return (NULL);
-	}
-	doggy->name = copy(name);
-	if (doggy->name == NULL)
-	{
-		free(doggy);
+	dog_ptr->name = malloc(sizeof(name) + 1);
+	if (dog_ptr->name == NULL)
 		return (NULL);
-	}
-	doggy->owner = copy(owner);
-	if (doggy->owner == NULL)
-	{
-		free(doggy->name);
-		free(doggy);
+	strcpy(dog_ptr->name, name);
+	dog_ptr->age = age;
+	dog_ptr->owner = malloc(sizeof(owner) + 1);
+	if (dog_ptr->owner == NULL)
 		return (NULL);
-	}
-	doggy->age = age;
-	return (doggy);
+	strcpy(dog_ptr->owner, owner);
+	return (dog_ptr);
 }
