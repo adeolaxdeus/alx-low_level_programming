@@ -15,6 +15,7 @@ int main(int argc, char *argv[])
 	int num1, num2;
 	func function;
 	char operand = argv[2][0];
+
 	if (argc != 4)
 	{
 		puts("Error");
