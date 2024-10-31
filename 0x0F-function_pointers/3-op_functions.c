@@ -1,63 +1,60 @@
+#include <stdio.h>
+#include <stdlib.h>
 /**
- * op_add - Calculate the sum of a and b.
- * @a: First integer.
- * @b: Second integer.
+ * op_add - Sum two integers
+ * @a: First number
+ * @b: Second number
  *
- * Return: The sum of a and b.
+ * Return: Sum of a and b
  */
 int op_add(int a, int b)
 {
 	return (a + b);
 }
+
 /**
- * op_sub - Calculate the difference of a and b.
- * @a: First integer.
- * @b: Second integer.
+ * op_sub - Difference between two integers
+ * @a: First number
+ * @b: Second number
  *
- * Return: Difference of a and b.
+ * Return: Difference of a and b
  */
 int op_sub(int a, int b)
 {
 	return (a - b);
 }
+
 /**
- * op_mul - Calculate the product of a and b.
- * @a: First integer.
- * @b: Second integer.
+ * op_mul - Calculate product of two integers
+ * @a: First number
+ * @b: Second number
  *
- * Return: The product of a and b.
+ * Return: Product of a and b
  */
 int op_mul(int a, int b)
 {
 	return (a * b);
 }
 /**
- * op_div - Calculate the division of a by b.
- * @a: Dividend.
- * @b: Divisor.
+ * op_div - divide a number by another
+ * @a: Dividend
+ * @b: Divisor
  *
- * Return: Division of a by b.
+ * Return: Result of a /  b
  */
 int op_div(int a, int b)
 {
-	if (b == 0)
-	{
-		return (0);
-	}
 	return (a / b);
 }
+
 /**
- * op_mod - Calculate the remainder of the division of a by b.
- * @a: Dividend.
- * @b: Divisor.
+ * op_mod - Calculate the remainder of the division of two integers
+ * @a: Dividend
+ * @b: Divisor
  *
- * Return: Remainder of the division a by b.
+ * Return: Remainder of a / b
  */
 int op_mod(int a, int b)
 {
-	if (b == 0)
-	{
-		return (0);
-	}
 	return (a % b);
 }

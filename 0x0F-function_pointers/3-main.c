@@ -1,39 +1,38 @@
-#include <stdlib.h>
 #include "3-calc.h"
+#include <stdlib.h>
 #include <stdio.h>
-#include <stddef.h>
 /**
- * main - Entry point.
- * @argc: Number of command line argument passed.
- * @argv: Command line arguments passed.
+ * main - Performs basic maths operation
+ * @argc: Number of arguments passed by user
+ * @argv: Pointer to arguments passed by user
  *
- * Return: 0 on success otherwise 98 or 99 or 100 on failure.
- *
+ * Return: Answer to the operation perform otherwise 99 if
+ * invalid operand is entered or 100 if user try to divide,
+ * modulus by 0.
  */
 int main(int argc, char *argv[])
 {
-	int num1, num2, result;
-	int (*operation)(int, int);
-
-	num1 = atoi(argv[1]);
-	num2 = atoi(argv[3]);
+	int num1, num2;
+	func function;
+	char operand = argv[2][0];
 	if (argc != 4)
 	{
-		printf("Error\n");
-		return (98);
+		puts("Error");
+		exit(98);
 	}
-	if ((argv[2][0] == '/' || argv[2][0] == '%') && argv[3][0] == '0' && argv[3][1] == '\0')
+	num1 = atoi(argv[1]);
+	num2 = atoi(argv[3]);
+	if ((operand == '/' || operand == '%') && (num2 == 0))
 	{
-		printf("Error\n");
-		return (100);
+		puts("Error");
+		exit(100);
 	}
-	operation = get_op_func(argv[2]);
-	if (operation == NULL)
+	function = get_op_func(argv[2]);
+	if (function == NULL)
 	{
-		printf("Error\n");
-		return (99);
+		puts("Error");
+		exit(99);
 	}
-	result = operation(num1, num2);
-	printf("%d\n", result);
+	printf("%d\n", function(num1, num2));
 	return (0);
 }
