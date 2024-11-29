@@ -29,7 +29,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		i++;
 	}
 	/* check if index is out of bound */
-	if (current == NULL && current->next == NULL)
+	if (current == NULL || current->next == NULL)
 		return (-1);
 	temp = current->next;
 	current->next = temp->next;
