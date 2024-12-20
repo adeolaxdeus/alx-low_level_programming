@@ -1,7 +1,6 @@
 #include "main.h"
 #include <stddef.h>
 #include <stdlib.h>
-#include <stdio.h>
 #include <unistd.h>
 #include <fcntl.h>
 /**
@@ -13,8 +12,8 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd, numwrite;
-	ssize_t numread;
+	int fd;
+	ssize_t numread, numwrite;
 	char *buffer;
 
 	fd = open(filename, O_RDWR);
@@ -25,7 +24,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (numread == -1)
 		return (0);
 	buffer[numread] = '\0';
-	numwrite = dprintf(STDOUT_FILENO, "%s", buffer);
+	numwrite = write(STDOUT_FILENO, buffer, numread);
 	if (numwrite != numread)
 		return (0);
 	return (numwrite);
